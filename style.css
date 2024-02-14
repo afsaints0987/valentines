@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(209, 244, 250);
+}
+
+button {
+    border: none;
+    padding: 10px 15px;
+    background-color: rgb(255, 113, 113);
+    border-radius: 20px;
+    color: white;
+    margin-top: 10px;
+    font-family: "Handlee", cursive;
+    font-size: 20px;
+}
+
+.text {
+    font-size: 50px;
+    font-family: "Handlee", cursive;
+    color: rgba(253, 49, 49, 0.7);
+    text-align: center;
+}
+
+.heart{
+    display: none;
+   width: 100px;
+   height: 100px;
+   transform: rotate(45deg);
+   transform-origin: center;
+   position: relative;
+   border: 3px solid pink;
+   background: red;
+   margin: 100px auto;
+   animation: heartbeat 1s infinite ;
+   box-shadow: 3px 3px 10px rgb(255, 113, 113, 0.7);
+}
+.heart::before, .heart::after{
+   content: '';
+   position: absolute;
+   width: 100px;
+   height: 100px;
+   border-radius: 50%;
+   background: red;
+}
+.heart::before{
+   left: -50px;
+}
+.heart::after{
+   top: -50px;  
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(0.85) rotate(45deg);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) rotate(45deg);
+    opacity: 1;
+  }
+}
+
